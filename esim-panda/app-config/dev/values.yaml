@@ -1,6 +1,6 @@
 global:
   environment: dev
-  namespace: ns-resim-dev
+  namespace: ns-esim-panda
   imageRegistry: 009160046075.dkr.ecr.eu-central-1.amazonaws.com
   serviceAccountName: resim-irsa-service-account
   secretProviderClass: aws-secrets-dev
