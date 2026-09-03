@@ -188,7 +188,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.global.secretName }}
-                  key: password
+                  key: PGSQL_PASS
             - name: DB_HOST
               valueFrom:
                 secretKeyRef:
