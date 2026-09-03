@@ -36,3 +36,12 @@ resources:
     cpu: "250m"
 probes:
   enabled: true
+  startup:
+    httpGet:
+      port: 3978
+  readiness:
+    httpGet:
+      port: 3978
+  liveness:
+    httpGet:
+      port: 3978

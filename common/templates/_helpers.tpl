@@ -179,6 +179,8 @@ spec:
           env:
             - name: AWS_REGION
               value: {{ .Values.global.awsRegion }}
+            - name: AWS_DEFAULT_REGION
+              value: {{ .Values.global.awsRegion }}
             {{- if .Values.config.springConfigLocation }}
             - name: SPRING_CONFIG_LOCATION
               value: {{ .Values.config.springConfigLocation }}
