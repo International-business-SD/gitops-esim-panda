@@ -184,11 +184,26 @@ spec:
               value: {{ .Values.config.springConfigLocation }}
             {{- end }}
             {{- if .Values.global.csiVolumes.enabled }}
-            - name: PGSQL_PASS
+            - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.global.secretName }}
-                  key: PGSQL_PASS
+                  key: password
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.global.secretName }}
+                  key: host
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.global.secretName }}
+                  key: dbname
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.global.secretName }}
+                  key: username
             {{- end }}
           volumeMounts:
             {{- if .Values.global.csiVolumes.enabled }}
