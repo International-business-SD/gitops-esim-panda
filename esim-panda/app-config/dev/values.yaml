@@ -18,7 +18,7 @@ pdb:
   enabled: false
 image:
   repository: esim-panda-dev
-  tag: stg-0.0.0-be6a58c-5
+  tag: dev-47b34a9-devops-patch-workflow-5
 name: esim-panda
 configMapName: esim-panda-config
 config: {}
