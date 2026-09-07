@@ -1,2 +1,6 @@
 global:
   awsRegion: ap-northeast-1
+
+
+CONFIG:
+  redis_url: dev-jp-esim-panda.fvvg2y.ng.0001.apne1.cache.amazonaws.com
